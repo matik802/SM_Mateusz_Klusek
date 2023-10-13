@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
     };
     private int currentIndex = 0;
     private int correctAnswers = 0;
-    private int last = -1;
+    private boolean answered = false;
     private static final String KEY_CURRENT_INDEX = "currentIndex";
     public static final String KEY_EXTRA_ANSWER = "com.example.SM_Zadanie_1.correctAnswer";
+    private static final String KEY_CORRECT_ANSWERS = "correctAnswers";
     private static final int REQUEST_CODE_PROMPT = 0;
     private boolean answerWasShown;
     ActivityResultLauncher<Intent> activityResultLauncher =
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState != null){
             currentIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
+            correctAnswers = savedInstanceState.getInt(KEY_CORRECT_ANSWERS);
         }
         trueButton = findViewById(R.id.true_button);
         falseButton = findViewById(R.id.false_button);
@@ -139,10 +141,11 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         Log.d("onSaveInstanceState!", "onSaveInstance ovveride!");
         outState.putInt(KEY_CURRENT_INDEX, currentIndex);
+        outState.putInt(KEY_CORRECT_ANSWERS, correctAnswers);
     }
 
     protected void checkAnswerCorrectness(boolean userAnswer) {
-        if (last == currentIndex) {
+        if (answered) {
             return;
         }
         boolean correctAnswer = questions[currentIndex].isTrueAnswer();
@@ -162,11 +165,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, this.getString(R.string.summary) + " " + correctAnswers + "/" + questions.length, Toast.LENGTH_SHORT).show();
             correctAnswers = 0;
         }
-        last = currentIndex;
+        answered = true;
     }
 
     private void setNextQuestion() {
         questionTextView.setText(questions[currentIndex].getQuestionId());
+        answered = false;
     }
 
     @Override
