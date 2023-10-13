@@ -11,4 +11,9 @@
     <string name="correct_answer">Poprawna odpowiedz</string>
     <string name="incorrect_answer">Zla odpowiedz</string>
     <string name="summary">Wynik</string>
+
+    <string name="tip_question">“Czy na pewno chcesz zobaczyc odpowiedz?</string>
+    <string name="button_answer">Pokaz odpowiedz</string>
+    <string name="button_prompt">Podpowiedz</string>
+    <string name="answer_was_shown">Odpowiedz byla juz wyswietlona!</string>
 </resources>
