@@ -1,0 +1,40 @@
+Pierwsze uruchomienie:
+2023-10-13 15:23:29.021  3907-3907  onCreate!               com.example.sm_zadanie_1             D  onCreate override!
+2023-10-13 15:23:29.081  3907-3907  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:23:29.085  3907-3907  onResume!               com.example.sm_zadanie_1             D  onResume override!
+2023-10-13 15:23:31.471  3907-3907  onPause!                com.example.sm_zadanie_1             D  onPause override!
+2023-10-13 15:23:31.480  3907-3907  onStop!                 com.example.sm_zadanie_1             D  onStop override!
+2023-10-13 15:23:31.483  3907-3907  onDestroy!              com.example.sm_zadanie_1             D  onDestroy override!
+2023-10-13 15:23:31.582  3907-3907  onCreate!               com.example.sm_zadanie_1             D  onCreate override!
+2023-10-13 15:23:31.588  3907-3907  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:23:31.591  3907-3907  onResume!               com.example.sm_zadanie_1             D  onResume override!
+Cofnij:
+2023-10-13 15:25:42.657  3907-3907  onPause!                com.example.sm_zadanie_1             D  onPause override!
+2023-10-13 15:25:43.652  3907-3907  onStop!                 com.example.sm_zadanie_1             D  onStop override!
+2023-10-13 15:25:43.656  3907-3907  onDestroy!              com.example.sm_zadanie_1             D  onDestroy override!
+Ponowne uruchomienie:
+2023-10-13 15:26:24.278  6273-6273  onCreate!               com.example.sm_zadanie_1             D  onCreate override!
+2023-10-13 15:26:24.361  6273-6273  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:26:24.365  6273-6273  onResume!               com.example.sm_zadanie_1             D  onResume override!
+Przycisk home:
+2023-10-13 15:27:33.215  6273-6273  onPause!                com.example.sm_zadanie_1             D  onPause override!
+2023-10-13 15:27:34.001  6273-6273  onStop!                 com.example.sm_zadanie_1             D  onStop override!
+Powrot z listy ostatnio uruchamianych aplikacji:
+2023-10-13 15:28:14.486  6273-6273  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:28:14.487  6273-6273  onResume!               com.example.sm_zadanie_1             D  onResume override!
+Zmiana orientacji ekranu:
+-powrót do pierwszego pytania
+2023-10-13 15:31:32.901  6273-6273  onPause!                com.example.sm_zadanie_1             D  onPause override!
+2023-10-13 15:31:32.904  6273-6273  onStop!                 com.example.sm_zadanie_1             D  onStop override!
+2023-10-13 15:31:32.906  6273-6273  onDestroy!              com.example.sm_zadanie_1             D  onDestroy override!
+2023-10-13 15:31:33.024  6273-6273  onCreate!               com.example.sm_zadanie_1             D  onCreate override!
+2023-10-13 15:31:33.029  6273-6273  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:31:33.031  6273-6273  onResume!               com.example.sm_zadanie_1             D  onResume override!
+Zmiana orientacji ekranu z nadpisaniem metody onSaveInstanceState():
+2023-10-13 15:51:32.147  6940-6940  onPause!                com.example.sm_zadanie_1             D  onPause override!
+2023-10-13 15:51:32.163  6940-6940  onStop!                 com.example.sm_zadanie_1             D  onStop override!
+2023-10-13 15:51:32.170  6940-6940  onSaveInstanceState!    com.example.sm_zadanie_1             D  Wywolana zostala metoda: onSaveInstanceState
+2023-10-13 15:51:32.172  6940-6940  onDestroy!              com.example.sm_zadanie_1             D  onDestroy override!
+2023-10-13 15:51:32.258  6940-6940  onCreate!               com.example.sm_zadanie_1             D  onCreate override!
+2023-10-13 15:51:32.263  6940-6940  onStart!                com.example.sm_zadanie_1             D  onStart override!
+2023-10-13 15:51:32.266  6940-6940  onResume!               com.example.sm_zadanie_1             D  onResume override!
