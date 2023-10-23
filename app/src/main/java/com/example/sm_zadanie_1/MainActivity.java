@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_CURRENT_INDEX = "currentIndex";
     public static final String KEY_EXTRA_ANSWER = "com.example.SM_Zadanie_1.correctAnswer";
     private static final String KEY_CORRECT_ANSWERS = "correctAnswers";
+    private static final String KEY_ANSWERED = "answered";
+    private static final String KEY_ANSWER_WAS_SHOWN = "answerWasShown";
     private static final int REQUEST_CODE_PROMPT = 0;
     private boolean answerWasShown;
     ActivityResultLauncher<Intent> activityResultLauncher =
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null){
             currentIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
             correctAnswers = savedInstanceState.getInt(KEY_CORRECT_ANSWERS);
+            answered = savedInstanceState.getBoolean(KEY_ANSWERED);
+            answerWasShown = savedInstanceState.getBoolean(KEY_ANSWER_WAS_SHOWN);
         }
         trueButton = findViewById(R.id.true_button);
         falseButton = findViewById(R.id.false_button);
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentIndex = (currentIndex + 1) % questions.length;
                 answerWasShown = false;
+                answered = false;
                 setNextQuestion();
             }
         });
@@ -142,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("onSaveInstanceState!", "onSaveInstance ovveride!");
         outState.putInt(KEY_CURRENT_INDEX, currentIndex);
         outState.putInt(KEY_CORRECT_ANSWERS, correctAnswers);
+        outState.putBoolean(KEY_ANSWERED, answered);
+        outState.putBoolean(KEY_ANSWER_WAS_SHOWN, answerWasShown);
     }
 
     protected void checkAnswerCorrectness(boolean userAnswer) {
@@ -170,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void setNextQuestion() {
         questionTextView.setText(questions[currentIndex].getQuestionId());
-        answered = false;
     }
 
     @Override
